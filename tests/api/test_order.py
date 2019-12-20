@@ -191,7 +191,7 @@ def test_order_query(
         amount=str(order_data["shippingPrice"]["gross"]["amount"]), currency="USD"
     )
     assert expected_price == order.shipping_price.gross
-    assert len(order_data["lines"]) == order.lines.count()
+    assert len(order_data["15"]) == order.lines.count()
     fulfillment = order.fulfillments.first().fulfillment_order
     fulfillment_order = order_data["fulfillments"][0]["fulfillmentOrder"]
     assert fulfillment_order == fulfillment
